@@ -1,0 +1,76 @@
+.position-control {
+  background: var(--bg-color);
+  padding: 20px;
+  &__balance-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  &__buttons-p-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  button-part {
+    flex-grow: 1;
+  }
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .custom-checkmark {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-color-main);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("~assets/svg/checked.svg") no-repeat center center;
+      background-size: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  input:checked + .custom-checkmark {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  input:not(:checked) + .custom-checkmark {
+    border-color: var(--border-color-main);
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  .checkbox-label {
+    color: var(--text-color);
+  }
+}

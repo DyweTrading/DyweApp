@@ -1,0 +1,11 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--wrong-color-alfa80);
+  border-radius: 8px;
+  & p {
+    color: var(--text-color);
+  }
+}

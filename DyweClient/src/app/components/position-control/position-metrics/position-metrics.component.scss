@@ -1,0 +1,16 @@
+.position-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  .position-metrics__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .position-metrics__title {
+    color: var(--color-text2);
+  }
+  .position-metrics__value {
+    color: var(--color-text);
+  }
+}

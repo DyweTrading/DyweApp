@@ -1,0 +1,16 @@
+<div class="switch-position__buttons mb-20">
+  <button
+    #buttonLongType
+    (click)="togglePosition('Long')"
+    class="button-long M-m24"
+  >
+    {{ "BUTTONS.Long" | translate }}
+  </button>
+  <button
+    #buttonShortType
+    (click)="togglePosition('Short')"
+    class="button-short M-m24 button-switch-pos-disabled"
+  >
+    {{ "BUTTONS.Short" | translate }}
+  </button>
+</div>

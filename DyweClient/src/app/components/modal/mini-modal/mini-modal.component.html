@@ -1,0 +1,14 @@
+<div class="mini-modal">
+  <div class="mini-modal__group">
+    <img
+      class="mini-modal__img"
+      src="./assets/svg/success-icon.svg"
+      alt="Success"
+    />
+    <p class="OS-16">{{ "MODALS." + modalContent | translate }}</p>
+  </div>
+  <button (click)="closeModal()" class="mini-modal__close">
+    <span class="mini-modal__line mini-modal__line1"></span>
+    <span class="mini-modal__line mini-modal__line2"></span>
+  </button>
+</div>

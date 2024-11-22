@@ -1,0 +1,24 @@
+<div class="wallet-info">
+  <button
+    #buttonWallet
+    (click)="showWalletList()"
+    class="wallet-button button-connect"
+  >
+    <p>{{ address | shortenAddress }}</p>
+    <img class="wallet-button-img" src="./assets/svg/arrow.svg" alt="Arrow" />
+  </button>
+  <div #walletList class="wallet-info__block">
+    <div (click)="openExplorer(address)" class="wallet-info__item">
+      <p class="OS-14">{{ "BUTTONS.Show in explorer" | translate }}</p>
+      <img src="./assets/svg/link.svg" alt="Link" />
+    </div>
+    <div (click)="copyAddressToClipboard(address)" class="wallet-info__item">
+      <p class="OS-14">{{ "BUTTONS.Copy address" | translate }}</p>
+      <img src="./assets/svg/copy.svg" alt="Copyboard" />
+    </div>
+    <div (click)="disconnectWallet()" class="wallet-info__item">
+      <p class="OS-14">{{ "BUTTONS.Disconnect" | translate }}</p>
+      <img src="./assets/svg/log-out.svg" alt="Logout" />
+    </div>
+  </div>
+</div>

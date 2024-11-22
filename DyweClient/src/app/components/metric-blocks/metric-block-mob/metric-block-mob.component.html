@@ -1,0 +1,9 @@
+<div class="metric-block-mob">
+  <p class="M-14">{{ title | translate }}</p>
+  <div class="metric-block-mob-value">
+    <p class="metrics-font-13" [ngClass]="colorClass">{{ value }}</p>
+    <p *ngIf="percentage" class="OS-10" [ngClass]="colorClass">
+      {{ percentage }}
+    </p>
+  </div>
+</div>

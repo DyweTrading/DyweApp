@@ -1,0 +1,60 @@
+<div class="nav-mobile">
+  <div class="container">
+    <div class="nav-mobile__content">
+      <div class="nav-mobile__buttons">
+        <div class="nav-mobile__switch-lang">
+          <button
+            #buttonLangNav
+            (click)="toggleSelectLang()"
+            class="nav-mobile__button-change-lang button-change-lang Os-12"
+          >
+            {{ currentLang }}
+          </button>
+          <div #langMenuNav class="nav-mobile__select-lang">
+            <div (click)="setLang('EN')" class="lang-item">
+              <p class="OS-12">EN</p>
+            </div>
+            <div (click)="setLang('RU')" class="lang-item">
+              <p class="OS-12">RU</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav-mobile__navigation">
+        <ul class="nav-mobile__navigation-ul">
+          <li class="nav-mobile__navigation-li">
+            <a class="nav-mobile__navigation-a M-20" href="#">{{
+              "HEADER.Trading NFT" | translate
+            }}</a>
+          </li>
+          <li class="nav-mobile__navigation-li">
+            <a class="nav-mobile__navigation-a M-20" href="#">{{
+              "HEADER.Trading Jettons" | translate
+            }}</a>
+          </li>
+          <li class="nav-mobile__navigation-li">
+            <a class="nav-mobile__navigation-a M-20" href="#">{{
+              "HEADER.Liquidity" | translate
+            }}</a>
+          </li>
+          <li class="nav-mobile__navigation-li">
+            <a class="nav-mobile__navigation-a M-20" href="#">{{
+              "HEADER.Copy trading" | translate
+            }}</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="social-links__block">
+        <a class="button-social" href="#">
+          <img src="./assets/svg/telegram.svg" alt="" />
+        </a>
+        <a class="button-social" href="#">
+          <img src="./assets/svg/x.svg" alt="" />
+        </a>
+        <a class="button-social" href="#">
+          <img src="./assets/svg/youtube.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

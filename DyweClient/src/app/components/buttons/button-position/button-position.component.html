@@ -1,0 +1,10 @@
+<button
+  class="button-position M-m20"
+  [disabled]="dissabled"
+  [ngClass]="{
+    long: positionType === 'BUTTONS.Long',
+    short: positionType === 'BUTTONS.Short'
+  }"
+>
+  {{ positionType | translate }}
+</button>

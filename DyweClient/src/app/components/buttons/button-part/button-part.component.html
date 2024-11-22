@@ -1,0 +1,8 @@
+<button
+  class="button-part"
+  (click)="handleValueChange(value)"
+  [ngClass]="{ active: isActive }"
+>
+  <ng-container *ngIf="buttonType === 'leverage'">x</ng-container>{{ value
+  }}<ng-container *ngIf="buttonType === 'amount'">%</ng-container>
+</button>

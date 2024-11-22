@@ -1,0 +1,71 @@
+<div class="search-pair-component">
+  <div class="search-pair-component__head mb-10">
+    <div class="search-pair-component__head-block">
+      <div class="search-pair-component__head-block-icon">
+        <img src="./assets/svg/search.svg" alt="Search Icon" />
+      </div>
+      <input
+        class="search-pair-component__head-block-input M-14"
+        type="text"
+        [(ngModel)]="searchTerm"
+        [placeholder]="'SEARCH-PAIR.Search' | translate"
+      />
+    </div>
+    <button
+      (click)="toggleSelectTradePair()"
+      class="search-pair-component__head-close"
+    >
+      <span class="search-close search-close-1"></span>
+      <span class="search-close search-close-2"></span>
+    </button>
+  </div>
+  <switcher-section
+    [sections]="sections"
+    [activeSection]="activeSection"
+    (updateActiveSection)="toggleSection($event)"
+  ></switcher-section>
+  <div class="search-pair-component__type-currency mb-10">
+    <div
+      (click)="toggleCurrencyType('ton')"
+      class="search-pair-component__type-currency-item"
+      [ngClass]="{ active: currencyType === 'ton' }"
+    >
+      <p class="search-pair-component__type-currency-item-text M-m16">Ton</p>
+    </div>
+    <div
+      (click)="toggleCurrencyType('usdt')"
+      class="search-pair-component__type-currency-item"
+      [ngClass]="{ active: currencyType === 'usdt' }"
+    >
+      <p class="search-pair-component__type-currency-item-text M-m16">USDT</p>
+    </div>
+  </div>
+  <div class="search-pair-component__metrics-line mb-10">
+    <p class="OS-14 text-color">{{ "SEARCH-PAIR.NV" | translate }}</p>
+    <div class="search-pair-component__metrics-line-end">
+      <p class="OS-15 text-color">{{ "SEARCH-PAIR.Last Price" | translate }}</p>
+      <p class="OS-14 text-color">
+        {{ "SEARCH-PAIR.Price Change" | translate }}
+      </p>
+    </div>
+  </div>
+  <div class="search-pair-component__nft-list">
+    <div
+      *ngIf="
+        activeSection === 'favorites' && filteredTradePairList.length === 0
+      "
+      class="no-favorites"
+    >
+      No selected pairs
+    </div>
+    <div class="search-pair-component__nft-content">
+      <pair-item
+        *ngFor="let item of filteredTradePairList"
+        [tradePairData]="item"
+        [pairSelectEl]="pairSelectEl"
+        [pairSelectMenu]="pairSelectMenu"
+        [currencyType]="currencyType"
+      ></pair-item>
+    </div>
+  </div>
+</div>

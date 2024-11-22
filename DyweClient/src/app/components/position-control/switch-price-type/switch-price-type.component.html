@@ -1,0 +1,38 @@
+<div class="switch-price-block">
+  <div class="switch-price-type-block">
+    <div
+      #selectPriceType
+      (click)="toggleSelectPriceType()"
+      class="switch-price-type"
+    >
+      <p class="M-m18">
+        {{ "POS-CONTROL." + priceType | translate }}
+      </p>
+      <img src="./assets/svg/arrow-gray.svg" alt="Arrow" />
+    </div>
+    <div #listPriceType class="switch-price-type-list">
+      <div
+        (click)="setPriceType(item)"
+        class="switch-price-type-item M-16"
+        *ngFor="let item of priceTypesArr"
+      >
+        {{ "POS-CONTROL." + item | translate }}
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="priceType === 'Limits'" class="mt-10">
+    <input-t
+      label="TON"
+      placeholder="POS-CONTROL.Price"
+      inputId="limit-price"
+      [value]="entryPrice"
+      [decimalPlaces]="4"
+      (valueChange)="onEntryPriceChange($event)"
+      [isAdaptive]="isAdaptive"
+    ></input-t>
+  </div>
+  <div class="mt-5" *ngIf="minimalAvailablePrice">
+    <error-message messageContent="POS-CONTROL.PriceMinErr"></error-message>
+  </div>
+</div>

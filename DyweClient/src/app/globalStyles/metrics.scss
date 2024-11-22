@@ -1,0 +1,19 @@
+/// Global Styles For Metrics Block
+.metric-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-block-mob {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.metric-block-mob-value {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+<div class="metric-block" *ngIf="!isMinMaxSplit">
+  <p class="M-m14">{{ title | translate }}</p>
+  <p class="OS-12" [ngClass]="colorClass">{{ value }}</p>
+  <p *ngIf="percentage" class="OS-12" [ngClass]="colorClass">
+    {{ percentage }}
+  </p>
+</div>
+
+<div class="metric-block" *ngIf="isMinMaxSplit">
+  <p class="M-m14">{{ title | translate }}</p>
+  <p class="OS-12">Max:{{ valueMax }}</p>
+  <p class="OS-12">Min:{{ valueMin }}</p>
+</div>

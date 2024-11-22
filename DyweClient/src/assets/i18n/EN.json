@@ -1,0 +1,94 @@
+{
+  "HEADER": {
+    "Trading NFT": "Trading NFT",
+    "Trading Jettons": "Trading Jettons",
+    "Liquidity": "Liquidity",
+    "Copy trading": "Copy trading"
+  },
+  "BUTTONS": {
+    "Connect Wallet": "Connect Wallet",
+    "Long": "Long",
+    "Short": "Short",
+    "Show in explorer": "Show in explorer",
+    "Copy address": "Copy address",
+    "Disconnect": "Disconnect",
+    "Edit": "Edit",
+    "Close": "Close",
+    "Save": "Save"
+  },
+  "SEARCH-PAIR": {
+    "Search": "Search",
+    "Favorites": "Favorites",
+    "All": "All",
+    "NV": "Name / Volume (24h)",
+    "Last Price": "Last Price",
+    "Price Change": "Price Change (24h)"
+  },
+  "TRADE-PAIR-METRICS": {
+    "Market Price": "Market Price",
+    "Change": "Change 24h",
+    "Volume": "Volume 24h",
+    "MaxMin": "Max/Min",
+    "Funding": "Funding",
+    "Next funding": "Next funding",
+    "Open Interest (L)": "Open Interest (L)",
+    "Open Interest (S)": "Open Interest (S)",
+    "Max": "Max",
+    "Min": "Min"
+  },
+  "POS-CONTROL": {
+    "Price": "Price",
+    "Market": "Market",
+    "Limits": "Limit",
+    "Balance": "Balance",
+    "Margin": "Margin",
+    "Leverage": "Leverage",
+    "Take Profit": "Take Profit",
+    "Stop Loss": "Stop Loss",
+    "Profit": "Profit",
+    "Loss": "Loss",
+    "Price TON": "Price TON",
+    "MarginMinErr": "Margin should be at least 0.1 TON",
+    "LeverageMinErr": "Leverage should be at least x1",
+    "TakeProfitGreaterErr": "Take profit should be greater than the entry price",
+    "TakeProfitLessErr": "Take profit should be less than the entry price",
+    "TakeProfitMinErr": "Take profit should be greater than 0.1",
+    "StopLossGreaterErr": "Stop Loss should be less than the entry price",
+    "StopLossLessErr": "Stop Loss should be greater than the entry price",
+    "StopLossMinErr": "StopLoss should be greater than 0.1",
+    "PriceMinErr": "Price should be at least 0.1 TON"
+  },
+  "POS-METRICS": {
+    "Position size": "Position size",
+    "Entry price": "Entry price",
+    "Last price": "Last price",
+    "Price": "Price",
+    "Take Profit": "Take Profit",
+    "Stop Loss": "Stop Loss",
+    "Unrealized P&L": "Unrealized P&L",
+    "Realized P&L": "Realized P&L",
+    "Est. Liq. Price": "Est. Liq. Price",
+    "Liq. Price": "Est. Liq. Price",
+    "Price Impact": "Price Impact",
+    "Approximate price TP": "Approximate price TP",
+    "Approximate price SL": "Approximate price SL",
+    "Fees": "Fees"
+  },
+  "POS-OR": {
+    "Open positions": "Open positions",
+    "Position history": "Position history",
+    "Open orders": "Open orders",
+    "Orders history": "Orders history",
+    "NoOP": "No Open Positions",
+    "NoPH": "No Positions History",
+    "NoOO": "No Open Orders",
+    "NoOH": "No Orders History"
+  },
+  "MODALS": {
+    "Copied": "Copied",
+    "ConfClosePos": "Do you really want to close the position?",
+    "ConfClosePosSub": "If you close the position, something will happen",
+    "ConfCloseOrder": "Do you really want to cancel the order?",
+    "ConfCloseOrderSub": "If you cancel the order, something will happen"
+  }
+}

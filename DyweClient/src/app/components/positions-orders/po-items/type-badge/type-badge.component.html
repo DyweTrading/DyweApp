@@ -1,0 +1,9 @@
+<div
+  class="type-badge M-m14"
+  [ngClass]="{
+    'badge-long': positionType === 'Long',
+    'badge-short': positionType === 'Short'
+  }"
+>
+  {{ "BUTTONS." + positionType | translate }}
+</div>

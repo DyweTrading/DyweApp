@@ -1,0 +1,10 @@
+<div class="switcher-section mb-10">
+  <p
+    *ngFor="let sectionItem of sections"
+    (click)="toggleActiveSection(sectionItem.id)"
+    class="switcher-section-item M-14"
+    [ngClass]="{ active: activeSection === sectionItem.id }"
+  >
+    {{ sectionItem.name | translate }}
+  </p>
+</div>

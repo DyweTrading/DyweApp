@@ -1,0 +1,87 @@
+<div class="trade-pair-metrics">
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Market Price' | translate"
+    [value]="metrics.marketPrice.toString()"
+    [percentage]="'~60$'"
+  />
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Change' | translate"
+    [value]="metrics.pricaChange"
+    colorClass="main-color"
+  />
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Volume' | translate"
+    [value]="metrics.volume"
+    [percentage]="'~54,000$'"
+  />
+  <metric-block
+    [isMinMaxSplit]="true"
+    [title]="'TRADE-PAIR-METRICS.MaxMin' | translate"
+    [valueMax]="metrics.maxPrice"
+    [valueMin]="metrics.minPrice"
+  />
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Funding' | translate"
+    [value]="metrics.fundingRes"
+    colorClass="main-color"
+  />
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Next funding' | translate"
+    [value]="metrics.nextFundingTime"
+  />
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Open Interest (L)' | translate"
+    [value]="metrics.openInteresL"
+  />
+  <metric-block
+    [title]="'TRADE-PAIR-METRICS.Open Interest (S)' | translate"
+    [value]="metrics.openInteresS"
+  />
+</div>
+
+<div class="trade-pair-metrics-mob">
+  <div class="trade-pair-metrics-mob-first">
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Market Price' | translate"
+      [value]="metrics.marketPrice"
+      [percentage]="'~60$'"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Change' | translate"
+      [value]="metrics.pricaChange"
+      colorClass="main-color"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Volume' | translate"
+      [value]="metrics.volume"
+      [percentage]="'~54,000$'"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Max' | translate"
+      [value]="metrics.maxPrice"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Min' | translate"
+      [value]="metrics.minPrice"
+    />
+  </div>
+  <div class="trade-pair-metrics-mob-second">
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Funding' | translate"
+      [value]="metrics.fundingRes"
+      colorClass="main-color"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Next funding' | translate"
+      [value]="metrics.nextFundingTime"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Open Interest (L)' | translate"
+      [value]="metrics.openInteresL"
+    />
+    <metric-block-mob
+      [title]="'TRADE-PAIR-METRICS.Open Interest (S)' | translate"
+      [value]="metrics.openInteresS"
+    />
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="range-block">
+  <div
+    class="range-container"
+    (mousedown)="onMouseDown($event)"
+    (touchstart)="onTouchStart($event)"
+  >
+    <div
+      class="range-progress"
+      [ngClass]="{
+        'take-profit': rangeType === 'tp',
+        'stop-loss': rangeType === 'sl'
+      }"
+      [ngStyle]="{ width: progressWidth + '%' }"
+    >
+      <div
+        class="range-point"
+        [ngClass]="{
+          'take-profit': rangeType === 'tp',
+          'stop-loss': rangeType === 'sl'
+        }"
+      ></div>
+    </div>
+    <div
+      class="range-parts-block"
+      [ngClass]="{
+        'take-profit': rangeType === 'tp',
+        'stop-loss': rangeType === 'sl'
+      }"
+    >
+      <div *ngFor="let part of rangeParts" class="range-part"></div>
+    </div>
+  </div>
+  <div class="range-value">
+    <input
+      class="range-value-input"
+      type="text"
+      [value]="value"
+      (input)="onInputChange($event)"
+      maxlength="3"
+      autocomplete="off"
+    />%
+  </div>
+</div>

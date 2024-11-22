@@ -1,0 +1,17 @@
+<div class="input-block">
+  <label class="input-block__label M-m18" [for]="inputId">{{
+    label | translate
+  }}</label>
+  <input
+    [value]="value"
+    [id]="inputId"
+    [placeholder]="placeholder | translate"
+    [max]="max"
+    maxlength="7"
+    class="input-block__input"
+    type="text"
+    autocomplete="off"
+    (input)="onInputChange($event)"
+    [ngClass]="{ 'input-block__input-adaptive': isAdaptive }"
+  />
+</div>

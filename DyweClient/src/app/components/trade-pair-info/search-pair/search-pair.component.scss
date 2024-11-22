@@ -1,0 +1,156 @@
+.search-pair-component {
+  width: 520px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: var(--secondary-color2);
+  padding: 16px;
+  border-radius: 8px;
+  height: 560px;
+  overflow: hidden;
+  z-index: 5;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    &-block {
+      width: 100%;
+      background-color: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color-gray);
+    }
+    &-block-icon {
+    }
+    &-block-input {
+      width: 100%;
+      border: none;
+      background: none;
+      outline: none;
+      color: var(--text-color);
+
+      &::placeholder {
+        color: var(--text-color2);
+      }
+    }
+    &-close {
+      display: none;
+      cursor: pointer;
+      width: 28px;
+      position: relative;
+      background: none;
+      border: none;
+    }
+  }
+
+  &__favorite-all {
+    display: flex;
+    width: 100%;
+    -webkit-box-shadow: inset 0px -1px 0px rgba(98, 98, 100, 1);
+    -moz-box-shadow: inset 0px -1px 0px rgba(98, 98, 100, 1);
+    box-shadow: inset 0px -1px 0px rgba(98, 98, 100, 1);
+
+    &-item {
+      cursor: pointer;
+      padding: 13.5px;
+      &.active {
+        border-bottom: 1px solid var(--main-color);
+      }
+    }
+  }
+
+  &__type-currency {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+    &-item {
+      cursor: pointer;
+      padding: 4px 18px;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+
+      &.active {
+        background-color: var(--main-color);
+      }
+
+      &.active &-text {
+        color: var(--bg-color);
+      }
+
+      &-text {
+        color: var(--text-color2);
+      }
+    }
+  }
+
+  &__metrics-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-end {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__nft-list {
+    height: 350px;
+    overflow: hidden;
+  }
+
+  &__nft-content {
+    max-height: 100%;
+    display: flex;
+    gap: 10px 0px;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+}
+
+.search-close {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  right: 0;
+}
+.search-close-1 {
+  transform: rotate(45deg);
+}
+.search-close-2 {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 600px) {
+  .search-pair-component {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .search-pair-component {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    border-radius: 0;
+    z-index: 5;
+  }
+  .search-pair-component__head-close {
+    display: block;
+  }
+  .search-pair-component__nft-list {
+    height: 73%;
+    padding-bottom: 60px;
+  }
+}

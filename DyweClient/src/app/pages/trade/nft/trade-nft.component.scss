@@ -1,0 +1,58 @@
+.trade-template {
+  display: grid;
+  grid-template-columns: minmax(840px, auto) 410px;
+  grid-template-rows: 100px 600px 600px;
+}
+.trade-pair-info {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.tradingview {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: var(--secondary-color);
+}
+.position-orders-info {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.position-control-block {
+  border-left: 1px solid var(--border-color-gray);
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+@media (max-width: 1660px) {
+  .trade-template {
+    grid-template-rows: 190px 600px 600px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .trade-template {
+    grid-template-rows: 240px 600px 600px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .trade-template {
+    grid-template-columns: 100%;
+    grid-template-rows: 240px 350px 350px auto;
+  }
+
+  .position-control-block {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    border: none;
+  }
+
+  .position-orders-info {
+    border-bottom: 1px solid var(--border-color-gray);
+  }
+}
+
+@media (max-width: 600px) {
+  .trade-template {
+    grid-template-rows: 340px 350px 350px auto;
+  }
+}

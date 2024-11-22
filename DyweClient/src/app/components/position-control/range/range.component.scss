@@ -1,0 +1,107 @@
+@import "../../../globalStyles/mixins";
+
+.range-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px 5px 5px;
+  border-radius: 8px;
+  background: var(--secondary-color2);
+}
+
+.range-container {
+  position: relative;
+  height: 46px;
+  width: 95%;
+  background-color: var(--secondary-color2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.range-progress {
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.1s;
+
+  &.take-profit {
+    background-color: rgba(188, 253, 76, 0.15);
+  }
+
+  &.stop-loss {
+    background-color: rgba(253, 76, 76, 0.15);
+  }
+}
+
+.range-point {
+  position: absolute;
+  border-radius: 0px 8px 8px 0px;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  transition: left 0.1s;
+  z-index: 2;
+
+  &.take-profit {
+    background-color: rgba(188, 253, 76, 0.15);
+  }
+
+  &.stop-loss {
+    background-color: rgba(253, 76, 76, 0.15);
+  }
+}
+
+.range-parts-block {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  width: 79.7%;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+
+  &.take-profit > .range-part {
+    background-color: var(--main-color);
+  }
+
+  &.stop-loss > .range-part {
+    background-color: var(--wrong-color);
+  }
+}
+
+.range-part {
+  height: 10px;
+  width: 1px;
+}
+
+.range-value {
+  @include Montserrat(16px, 500, 130%, 3%);
+  display: flex;
+  align-items: center;
+}
+
+.range-value-input {
+  position: relative;
+  max-width: 60px;
+  padding: 0;
+  margin: 0;
+  @include Montserrat(16px, 500, 130%, 3%);
+  background: none;
+  border: none;
+  outline: none;
+  text-align: end;
+  color: var(--text-color);
+  &::placeholder {
+    @include Montserrat(16px, 400, 130%, 3%);
+    color: var(--text-color2);
+  }
+}
+
+@media (max-width: 840px) {
+}

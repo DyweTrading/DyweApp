@@ -1,0 +1,15 @@
+.switcher-section {
+  display: flex;
+  width: 100%;
+  -webkit-box-shadow: inset 0px -1px 0px rgba(98, 98, 100, 1);
+  -moz-box-shadow: inset 0px -1px 0px rgba(98, 98, 100, 1);
+  box-shadow: inset 0px -1px 0px rgba(98, 98, 100, 1);
+
+  &-item {
+    cursor: pointer;
+    padding: 13.5px;
+    &.active {
+      border-bottom: 1px solid var(--main-color);
+    }
+  }
+}

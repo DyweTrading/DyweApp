@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "./mixins.scss";
+
+/* Global Fonts */
+
+.logo-font {
+  @include Montserrat(18px, 600, 130%, 3%);
+}
+
+.metrics-font-14 {
+  @include OpenSans(14px, 600, 130%, 3%);
+}
+
+.metrics-font-13 {
+  @include OpenSans(13px, 600, 130%, 3%);
+}
+
+/* Montserrat Regular */
+.M-36 {
+  @include Montserrat(36px, 400, 130%, 3%);
+}
+.M-34 {
+  @include Montserrat(34px, 400, 130%, 3%);
+}
+.M-32 {
+  @include Montserrat(32px, 400, 130%, 3%);
+}
+.M-30 {
+  @include Montserrat(30px, 400, 130%, 3%);
+}
+.M-28 {
+  @include Montserrat(28px, 400, 130%, 3%);
+}
+.M-26 {
+  @include Montserrat(26px, 400, 130%, 3%);
+}
+.M-24 {
+  @include Montserrat(24px, 400, 130%, 3%);
+}
+.M-22 {
+  @include Montserrat(22px, 400, 130%, 3%);
+}
+.M-20 {
+  @include Montserrat(20px, 400, 130%, 3%);
+}
+.M-18 {
+  @include Montserrat(18px, 400, 130%, 3%);
+}
+.M-16 {
+  @include Montserrat(16px, 400, 130%, 3%);
+}
+.M-14 {
+  @include Montserrat(14px, 400, 130%, 3%);
+}
+.M-12 {
+  @include Montserrat(12px, 400, 130%, 3%);
+}
+.M-10 {
+  @include Montserrat(10px, 400, 130%, 3%);
+}
+
+/* Montserrat Medium */
+.M-m36 {
+  @include Montserrat(36px, 500, 130%, 3%);
+}
+.M-m34 {
+  @include Montserrat(34px, 500, 130%, 3%);
+}
+.M-m32 {
+  @include Montserrat(32px, 500, 130%, 3%);
+}
+.M-m30 {
+  @include Montserrat(30px, 500, 130%, 3%);
+}
+.M-m28 {
+  @include Montserrat(28px, 500, 130%, 3%);
+}
+.M-m26 {
+  @include Montserrat(26px, 500, 130%, 3%);
+}
+.M-m24 {
+  @include Montserrat(24px, 500, 130%, 3%);
+}
+.M-m22 {
+  @include Montserrat(22px, 500, 130%, 3%);
+}
+.M-m20 {
+  @include Montserrat(20px, 500, 130%, 3%);
+}
+.M-m18 {
+  @include Montserrat(18px, 500, 130%, 3%);
+}
+.M-m16 {
+  @include Montserrat(16px, 500, 130%, 3%);
+}
+.M-m14 {
+  @include Montserrat(14px, 500, 130%, 3%);
+}
+.M-m12 {
+  @include Montserrat(12px, 500, 130%, 3%);
+}
+.M-m10 {
+  @include Montserrat(10px, 500, 130%, 3%);
+}
+
+/* Montserrat Bold */
+.M-b36 {
+  @include Montserrat(36px, 700, 130%, 3%);
+}
+.M-b34 {
+  @include Montserrat(34px, 700, 130%, 3%);
+}
+.M-b32 {
+  @include Montserrat(32px, 700, 130%, 3%);
+}
+.M-b30 {
+  @include Montserrat(30px, 700, 130%, 3%);
+}
+.M-b28 {
+  @include Montserrat(28px, 700, 130%, 3%);
+}
+.M-b26 {
+  @include Montserrat(26px, 700, 130%, 3%);
+}
+.M-b24 {
+  @include Montserrat(24px, 700, 130%, 3%);
+}
+.M-b22 {
+  @include Montserrat(22px, 700, 130%, 3%);
+}
+.M-b20 {
+  @include Montserrat(20px, 700, 130%, 3%);
+}
+.M-b18 {
+  @include Montserrat(18px, 700, 130%, 3%);
+}
+.M-b16 {
+  @include Montserrat(16px, 700, 130%, 3%);
+}
+.M-b14 {
+  @include Montserrat(14px, 700, 130%, 3%);
+}
+.M-b12 {
+  @include Montserrat(12px, 700, 130%, 3%);
+}
+.M-b10 {
+  @include Montserrat(10px, 700, 130%, 3%);
+}
+
+/* Open Sans Regular */
+.OS-36 {
+  @include OpenSans(36px, 400, 130%, 2%);
+}
+.OS-34 {
+  @include OpenSans(34px, 400, 130%, 2%);
+}
+.OS-32 {
+  @include OpenSans(32px, 400, 130%, 2%);
+}
+.OS-30 {
+  @include OpenSans(30px, 400, 130%, 2%);
+}
+.OS-28 {
+  @include OpenSans(28px, 400, 130%, 2%);
+}
+.OS-26 {
+  @include OpenSans(26px, 400, 130%, 2%);
+}
+.OS-24 {
+  @include OpenSans(24px, 400, 130%, 2%);
+}
+.OS-22 {
+  @include OpenSans(22px, 400, 130%, 2%);
+}
+.OS-20 {
+  @include OpenSans(20px, 400, 130%, 2%);
+}
+.OS-18 {
+  @include OpenSans(18px, 400, 130%, 2%);
+}
+.OS-16 {
+  @include OpenSans(16px, 400, 130%, 2%);
+}
+.OS-14 {
+  @include OpenSans(14px, 400, 130%, 2%);
+}
+.OS-12 {
+  @include OpenSans(12px, 400, 130%, 2%);
+}
+.OS-10 {
+  @include OpenSans(10px, 400, 130%, 2%);
+}

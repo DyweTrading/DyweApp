@@ -1,0 +1,31 @@
+:root {
+  --main-color: #bcfd4c;
+  --main-color-alfa80: rgba(188, 253, 76, 0.8);
+  --wrong-color: #fd4c4c;
+  --wrong-color-alfa80: rgba(253, 76, 76, 0.8);
+  --bg-color: #00000a;
+  --secondary-color: #303030;
+  --secondary-color2: #262626;
+  --secondary-color3: #171717;
+  --text-color: #f6f4eb;
+  --text-color-alfa80: rgba(246, 244, 235, 0.8);
+  --text-color2: #919191;
+  --border-color-main: #698e2f;
+  --border-color-gray: #626264;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.take-profit-amount {
+  color: var(--main-color);
+}
+
+.stop-loss-amount {
+  color: var(--wrong-color);
+}

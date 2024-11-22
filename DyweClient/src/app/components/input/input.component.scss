@@ -1,0 +1,38 @@
+@import "../../globalStyles/mixins";
+
+.input-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color2);
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 100%;
+
+  &__label {
+    color: var(--text-color);
+  }
+  &__input {
+    @include Montserrat(16px, 500, 130%, 3%);
+    background: none;
+    border: none;
+    outline: none;
+    text-align: end;
+    color: var(--text-color);
+    &::placeholder {
+      @include Montserrat(16px, 400, 130%, 3%);
+      color: var(--text-color2);
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .input-block__input-adaptive {
+    @include Montserrat(14px, 500, 130%, 3%);
+    width: 70px;
+
+    &::placeholder {
+      @include Montserrat(14px, 400, 130%, 3%);
+    }
+  }
+}

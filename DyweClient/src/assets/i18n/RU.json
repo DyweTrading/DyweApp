@@ -1,0 +1,94 @@
+{
+  "HEADER": {
+    "Trading NFT": "Трейдинг NFT",
+    "Trading Jettons": "Трейдинг Jettons",
+    "Liquidity": "Ликвидность",
+    "Copy trading": "Копи трейдинг"
+  },
+  "BUTTONS": {
+    "Connect Wallet": "Подключить кошелёк",
+    "Long": "Лонг",
+    "Short": "Шорт",
+    "Show in explorer": "Tonviewer",
+    "Copy address": "Копировать адрес",
+    "Disconnect": "Отключить",
+    "Edit": "Редакт.",
+    "Close": "Закрыть",
+    "Save": "Сохранить"
+  },
+  "SEARCH-PAIR": {
+    "Search": "Поиск",
+    "Favorites": "Избранные",
+    "All": "Все",
+    "NV": "Имя / Объём (24h)",
+    "Last Price": "Последня цена",
+    "Price Change": "Процент. изменение (24h)"
+  },
+  "TRADE-PAIR-METRICS": {
+    "Market Price": "Рыночная цена",
+    "Change": "Изменение 24ч",
+    "Volume": "Объем 24ч",
+    "MaxMin": "Макс/Мин",
+    "Funding": "Финанс.",
+    "Next funding": "След. финанс.",
+    "Open Interest (L)": "Открытый интерес (L)",
+    "Open Interest (S)": "Открытый интерес (S)",
+    "Max": "Макс",
+    "Min": "Mин"
+  },
+  "POS-CONTROL": {
+    "Price": "Цена",
+    "Market": "Текущая цена",
+    "Limits": "Лимитная",
+    "Balance": "Баланс",
+    "Margin": "Маржа",
+    "Leverage": "Плечо",
+    "Take Profit": "Тейк-профит",
+    "Stop Loss": "Стоп-лосс",
+    "Profit": "Прибыль",
+    "Loss": "Убыток",
+    "Price TON": "Цена TON",
+    "MarginMinErr": "Маржа должна составлять не менее 0,1 TON",
+    "LeverageMinErr": "Кредитное плечо должно быть не менее x1",
+    "TakeProfitGreaterErr": "Тейк-профит должен быть больше цены входа",
+    "TakeProfitLessErr": "Тейк-профит должен быть меньше цены входа",
+    "TakeProfitMinErr": "Тейк-профит должен быть больше 0,1",
+    "StopLossGreaterErr": "Стоп-лосс должен быть меньше цены входа",
+    "StopLossLessErr": "Стоп-лосс должен быть больше цены входа",
+    "StopLossMinErr": "Стоп-лосс должен быть больше 0,1",
+    "PriceMinErr": "Цена должна быть не менее 0,1 TON"
+  },
+  "POS-METRICS": {
+    "Position size": "Размер позиции",
+    "Entry price": "Цена входа",
+    "Last price": "Последня цена",
+    "Price": "Цена",
+    "Take Profit": "Тейк-профит",
+    "Stop Loss": "Стоп-лосс",
+    "Unrealized P&L": "Нереал. P&L",
+    "Realized P&L": "Реал. P&L",
+    "Est. Liq. Price": "Приблиз. цена ликвид.",
+    "Liq. Price": "Цена ликвид.",
+    "Price Impact": "Ценовое воздействие",
+    "Approximate price TP": "Приблиз. цена ТП",
+    "Approximate price SL": "Приблиз. цена СЛ",
+    "Fees": "Комиссия"
+  },
+  "POS-OR": {
+    "Open positions": "Открытые позиции",
+    "Position history": "История позиций",
+    "Open orders": "Открытые ордеры",
+    "Orders history": "История ордеров",
+    "NoOP": "Открытые позиции отсутствуют",
+    "NoPH": "История позиций отсутствует",
+    "NoOO": "Открытые ордера отсутствуют",
+    "NoOH": "История ордеров отсутствует"
+  },
+  "MODALS": {
+    "Copied": "Скопировано",
+    "ConfClosePos": "Вы действительно хотите закрыть позицию?",
+    "ConfClosePosSub": "Если вы закроете позицию, произойдет следующее",
+    "ConfCloseOrder": "Вы действительно хотите отменить ордер?",
+    "ConfCloseOrderSub": "Если вы отмените ордер, произойдет следующее"
+  }
+}

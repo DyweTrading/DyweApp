@@ -1,0 +1,15 @@
+.button-po {
+  color: var(--text-color);
+  border-radius: 4px;
+  padding: 8px 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.po-b-edit {
+  background-color: var(--border-color-main);
+}
+.po-b-close {
+  background-color: var(--wrong-color);
+}

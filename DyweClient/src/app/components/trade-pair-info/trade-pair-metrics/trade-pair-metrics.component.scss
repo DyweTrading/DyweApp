@@ -1,0 +1,49 @@
+.trade-pair-metrics {
+  max-width: max-content;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.trade-pair-metrics-mob {
+  display: none;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &-first,
+  &-second {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1670px) {
+  .trade-pair-metrics {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1450px) {
+  .trade-pair-metrics {
+    display: none;
+  }
+  .trade-pair-metrics-mob {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .trade-pair-metrics-mob {
+    flex-direction: column;
+    gap: 5px;
+
+    &-first,
+    &-second {
+      width: 100%;
+    }
+  }
+}

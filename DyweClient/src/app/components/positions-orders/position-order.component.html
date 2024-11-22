@@ -1,0 +1,79 @@
+<div class="position-order-component">
+  <switcher-section
+    [sections]="sections"
+    [activeSection]="activeSection"
+    (updateActiveSection)="toggleSection($event)"
+  />
+  <div
+    class="position-order-component__content-empty"
+    *ngIf="isEmpty || !wallet"
+  >
+    <button-connect *ngIf="!wallet" />
+    <p
+      *ngIf="wallet && activeSection === 'open-position'"
+      class="M-m16 text-color"
+    >
+      {{ "POS-OR.NoOP" | translate }}
+    </p>
+    <p
+      *ngIf="wallet && activeSection === 'position-history'"
+      class="M-m16 text-color"
+    >
+      {{ "POS-OR.NoPH" | translate }}
+    </p>
+    <p
+      *ngIf="wallet && activeSection === 'open-orders'"
+      class="M-m16 text-color"
+    >
+      {{ "POS-OR.NoOO" | translate }}
+    </p>
+    <p
+      *ngIf="wallet && activeSection === 'orders-history'"
+      class="M-m16 text-color"
+    >
+      {{ "POS-OR.NoOH" | translate }}
+    </p>
+  </div>
+  <div
+    class="position-order-component__content"
+    *ngIf="!isEmpty && activeSection === 'open-position' && wallet"
+  >
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+    <p-open-item />
+  </div>
+  <div
+    class="position-order-component__content"
+    *ngIf="!isEmpty && activeSection === 'position-history' && wallet"
+  >
+    <p-history-item />
+    <p-history-item />
+    <p-history-item />
+    <p-history-item />
+  </div>
+  <div
+    class="position-order-component__content"
+    *ngIf="!isEmpty && activeSection === 'open-orders' && wallet"
+  >
+    <o-open-item />
+    <o-open-item />
+    <o-open-item />
+    <o-open-item />
+  </div>
+  <div
+    class="position-order-component__content"
+    *ngIf="!isEmpty && activeSection === 'orders-history' && wallet"
+  >
+    <o-history-item />
+    <o-history-item />
+    <o-history-item />
+    <o-history-item />
+  </div>
+</div>

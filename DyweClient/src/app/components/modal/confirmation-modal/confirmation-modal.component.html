@@ -1,0 +1,17 @@
+<dialog #dialog class="confirm-modal">
+  <p class="M-b22 mb-5">{{ confirmText | translate }}</p>
+  <p class="M-16 mb-20">{{ subConfirmText | translate }}</p>
+  <div class="confirm-modal__content">
+    <ng-container *ngIf="externalComponent">
+      <ng-container *ngComponentOutlet="externalComponent"></ng-container>
+    </ng-container>
+  </div>
+  <div class="confirm-modal__buttons">
+    <button-custom (click)="close()" text="OK" colorClass="main-b" />
+    <button-custom
+      (click)="close()"
+      text="BUTTONS.Close"
+      colorClass="wrong-b"
+    />
+  </div>
+</dialog>

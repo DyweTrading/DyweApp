@@ -1,0 +1,118 @@
+.header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 35px;
+    z-index: 5;
+  }
+  &__nav {
+    flex: 1;
+  }
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 5;
+  }
+  &__switch-lang {
+    position: relative;
+  }
+
+  &__select-lang {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    background-color: var(--secondary-color2);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__button-menu {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 14px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &.active .line1,
+    &.active .line2 {
+      top: 25%;
+      transform: rotate(45deg);
+    }
+    &.active .line3 {
+      top: 25%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.line1 {
+  top: 0;
+}
+.line2 {
+  top: 7px;
+}
+.line3 {
+  top: 14px;
+}
+
+@media (max-width: 900px) {
+  .header__content {
+    justify-content: space-between;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__button-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__button-change-lang {
+    display: none;
+  }
+}
+
+@media (max-width: 410px) {
+  .header__logo-block {
+    margin-right: 0px;
+  }
+  .header__buttons {
+    gap: 10px;
+  }
+}

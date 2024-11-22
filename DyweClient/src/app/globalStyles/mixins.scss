@@ -1,0 +1,17 @@
+@mixin Montserrat($fz, $fw, $lh: 100%, $ls: 1%) {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin OpenSans($fz, $fw, $lh: 100%, $ls: 1%) {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

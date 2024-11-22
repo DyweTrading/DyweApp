@@ -1,0 +1,83 @@
+<header class="header">
+  <div class="header__content">
+    <div class="header__logo-block">
+      <img src="./assets/svg/Logo.svg" alt="Dywe Logo" />
+      <p class="header__logo logo-font">Dywe</p>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__ul">
+        <li class="header__li">
+          <a
+            [routerLink]="['/trade/nft', 'ATN-TON']"
+            [ngClass]="{ active: isActive('/trade/nft') }"
+            class="header__link link M-14"
+            >{{ "HEADER.Trading NFT" | translate }}</a
+          >
+        </li>
+        <li class="header__li">
+          <a
+            [routerLink]="['/trade/jettons', 'TON-USDT']"
+            [ngClass]="{ active: isActive('/trade/jettons') }"
+            class="header__link link M-14"
+            >{{ "HEADER.Trading Jettons" | translate }}</a
+          >
+        </li>
+        <li class="header__li">
+          <a
+            routerLink="/liquidity"
+            [ngClass]="{ active: isActive('/lol') }"
+            class="header__link link M-14"
+          >
+            {{ "HEADER.Liquidity" | translate }}
+          </a>
+        </li>
+        <li class="header__li">
+          <a
+            routerLink="/copy-trading"
+            [ngClass]="{ active: isActive('/lol1') }"
+            class="header__link link M-14"
+          >
+            {{ "HEADER.Copy trading" | translate }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__buttons">
+      <div class="header__switch-lang">
+        <button
+          #buttonLang
+          (click)="toggleSelectLang()"
+          class="header__button-change-lang button-change-lang Os-12"
+        >
+          {{ currentLang }}
+        </button>
+        <div #langMenu class="header__select-lang">
+          <div (click)="setLang('EN')" class="lang-item">
+            <p class="OS-12">EN</p>
+          </div>
+          <div (click)="setLang('RU')" class="lang-item">
+            <p class="OS-12">RU</p>
+          </div>
+        </div>
+      </div>
+      <button-connect
+        [isAdaptive]="true"
+        *ngIf="!bouncableUserFriendlyAddress"
+      />
+      <app-button-w
+        *ngIf="bouncableUserFriendlyAddress"
+        [address]="this.bouncableUserFriendlyAddress"
+      ></app-button-w>
+
+      <button
+        #buttonMobile
+        (click)="toggleMobileMenu()"
+        class="header__button-menu"
+      >
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,27 @@
+<app-nav-mobile />
+<app-header />
+
+<main class="trade-template">
+  <div class="trade-pair-info">
+    <trade-pair-info
+      [tradePairCurrent]="currentTradePair"
+      [tradePairList]="tradePairList"
+      [isSelectMedia]="true"
+    />
+  </div>
+  <div class="tradingview">
+    <chart
+      currentPath="nft"
+      [currentTradePair]="
+        currentTradePair.tradePairCollectionAddr ||
+        'EQAOQdwdw8kGftJCSFgOErM1mBjYPe4DBPq8-AhF6vr9si5N'
+      "
+    />
+  </div>
+  <div class="position-orders-info">
+    <positions-orders />
+  </div>
+  <div class="position-control-block">
+    <position-control />
+  </div>
+</main>

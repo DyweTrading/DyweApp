@@ -1,0 +1,6 @@
+<button
+  class="button-po OS-14"
+  [ngClass]="{'po-b-edit': buttonType === 'Edit', 'po-b-close': buttonType === 'Close', }"
+>
+  {{ "BUTTONS." + buttonType | translate }}
+</button>

@@ -1,0 +1,16 @@
+<div class="po-item">
+  <div class="po-item__icon-info">
+    <div class="po-item__icon-info-icon">
+      <img src="./assets/png/template-img.png" alt="NFT Icon" />
+    </div>
+    <div class="po-item__icon-info-content">
+      <div class="po-item__icon-info-content-name M-16">CN/TON</div>
+      <type-badge [positionType]="'Long'" />
+    </div>
+  </div>
+  <p-open-metrics />
+  <div class="po-item__buttons">
+    <po-button (click)="openModal()" [buttonType]="'Edit'" />
+    <po-button (click)="openConfirmModal()" [buttonType]="'Close'" />
+  </div>
+</div>

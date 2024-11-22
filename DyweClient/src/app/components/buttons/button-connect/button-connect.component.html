@@ -1,0 +1,7 @@
+<button
+  class="button-connect"
+  [ngClass]="isAdaptive ? 'button-connect-adaptive' : ''"
+  (click)="connectWallet()"
+>
+  {{ "BUTTONS.Connect Wallet" | translate }}
+</button>

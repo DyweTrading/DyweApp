@@ -1,0 +1,261 @@
+<dialog #editOrderModal class="edit-pos-modal">
+  <div class="edit-pos-modal__icon-info mb-20">
+    <div class="edit-pos-modal__icon-info-icon">
+      <img src="./assets/png/template-img.png" alt="NFT Icon" />
+    </div>
+    <div class="edit-pos-modal__icon-info-content">
+      <div class="edit-pos-modal__icon-info-content-name M-16 text-color">
+        CN/TON
+      </div>
+      <type-badge positionType="BUTTONS.Long" />
+    </div>
+  </div>
+
+  <switch-price-type
+    [priceType]="newPosition.PriceType"
+    [entryPrice]="newPosition.EntryPrice"
+    (priceTypeChange)="onPriceTypeChange($event)"
+    (entryPriceChange)="onEntryPriceChange($event)"
+    [minimalAvailablePrice]="positionErrorsState.minimalAvailablePrice"
+    (minimalAvailablePriceChange)="onMinimalAvailablePriceChange($event)"
+    [isAdaptive]="true"
+  ></switch-price-type>
+
+  <div class="position-control__balance-block">
+    <p class="OS-14">{{ "POS-CONTROL.Balance" | translate }}</p>
+    <p class="OS-14">{{ balance }} TON</p>
+  </div>
+
+  <div class="mb-5">
+    <input-t
+      label="TON"
+      placeholder="POS-CONTROL.Margin"
+      inputId="position-amount"
+      [value]="newPosition.Margin"
+      [max]="balance"
+      (valueChange)="onPositionMarginChange($event)"
+      [isAdaptive]="true"
+    >
+    </input-t>
+  </div>
+
+  <div class="mb-5">
+    <error-message
+      *ngIf="positionErrorsState.minimalAvailableBalance"
+      messageContent="POS-CONTROL.MarginMinErr"
+    ></error-message>
+  </div>
+
+  <div class="position-control__buttons-p-block mb-10">
+    <button-part
+      [value]="1"
+      buttonType="amount"
+      [isActive]="activeMarginButton === 1"
+      (valueChanged)="onPositionMarginPercentChange($event)"
+    ></button-part>
+    <button-part
+      [value]="25"
+      buttonType="amount"
+      [isActive]="activeMarginButton === 25"
+      (valueChanged)="onPositionMarginPercentChange($event)"
+    ></button-part>
+    <button-part
+      [value]="50"
+      buttonType="amount"
+      [isActive]="activeMarginButton === 50"
+      (valueChanged)="onPositionMarginPercentChange($event)"
+    ></button-part>
+    <button-part
+      [value]="75"
+      buttonType="amount"
+      [isActive]="activeMarginButton === 75"
+      (valueChanged)="onPositionMarginPercentChange($event)"
+    ></button-part>
+    <button-part
+      [value]="100"
+      buttonType="amount"
+      [isActive]="activeMarginButton === 100"
+      (valueChanged)="onPositionMarginPercentChange($event)"
+    ></button-part>
+  </div>
+
+  <div class="mb-5">
+    <input-t
+      label="POS-CONTROL.Leverage"
+      placeholder="x1"
+      inputId="position-leverage"
+      [value]="newPosition.Leverage"
+      [max]="maxLeverage"
+      (valueChange)="onLeverageChange($event)"
+      [isAdaptive]="true"
+    ></input-t>
+  </div>
+
+  <div class="mb-5">
+    <error-message
+      *ngIf="positionErrorsState.minimalAvailableLeverage"
+      messageContent="POS-CONTROL.LeverageMinErr"
+    ></error-message>
+  </div>
+
+  <div class="position-control__buttons-p-block mb-20">
+    <button-part
+      [value]="10"
+      buttonType="leverage"
+      [isActive]="activeLeverageButton === 10"
+      (valueChanged)="onLeverageChange($event)"
+    ></button-part>
+    <button-part
+      [value]="20"
+      buttonType="leverage"
+      [isActive]="activeLeverageButton === 20"
+      (valueChanged)="onLeverageChange($event)"
+    ></button-part>
+    <button-part
+      [value]="30"
+      buttonType="leverage"
+      [isActive]="activeLeverageButton === 30"
+      (valueChanged)="onLeverageChange($event)"
+    ></button-part>
+    <button-part
+      [value]="40"
+      buttonType="leverage"
+      [isActive]="activeLeverageButton === 40"
+      (valueChanged)="onLeverageChange($event)"
+    ></button-part>
+    <button-part
+      [value]="50"
+      buttonType="leverage"
+      [isActive]="activeLeverageButton === 50"
+      (valueChanged)="onLeverageChange($event)"
+    ></button-part>
+  </div>
+
+  <label class="custom-checkbox mb-5">
+    <span class="checkbox-label OS-16">TP/SL</span>
+    <input type="checkbox" [(ngModel)]="isTPSL" />
+    <span class="custom-checkmark"></span>
+  </label>
+
+  <div *ngIf="isTPSL" class="mb-20">
+    <div class="position-control__balance-block">
+      <p class="OS-14">{{ "POS-CONTROL.Profit" | translate }}</p>
+      <p class="take-profit-amount OS-14">
+        +{{ this.newPosition.TakeProfitAmount?.toFixed(2) }} TON
+      </p>
+    </div>
+    <div class="mb-5">
+      <input-t
+        label="POS-CONTROL.Take Profit"
+        placeholder="POS-CONTROL.Price TON"
+        inputId="position-take-profit"
+        [value]="newPosition.TakeProfit"
+        [decimalPlaces]="4"
+        (valueChange)="calculateTakeProfitPrice($event)"
+        [isAdaptive]="true"
+      />
+    </div>
+    <div class="mb-5">
+      <error-message
+        *ngIf="positionErrorsState.takeProfitMore"
+        messageContent="POS-CONTROL.TakeProfitGreaterErr"
+      ></error-message>
+    </div>
+    <div class="mb-5">
+      <error-message
+        *ngIf="positionErrorsState.takeProfitLess"
+        messageContent="POS-CONTROL.TakeProfitLessErr"
+      ></error-message>
+    </div>
+    <div class="mb-5">
+      <error-message
+        *ngIf="positionErrorsState.minimalAvailableTakeProfit"
+        messageContent="POS-CONTROL.TakeProfitMinErr"
+      ></error-message>
+    </div>
+    <div class="mb-10">
+      <custom-range
+        rangeType="tp"
+        [value]="this.newPosition.TakeProfitPercent || 0"
+        [max]="200"
+        (valueChange)="onTakeProfitPercentChange($event)"
+      />
+    </div>
+    <div class="position-control__balance-block">
+      <p class="OS-14">{{ "POS-CONTROL.Loss" | translate }}</p>
+      <p class="stop-loss-amount OS-14">
+        -{{ this.newPosition.StopLossAmount?.toFixed(2) }} TON
+      </p>
+    </div>
+    <div class="mb-5">
+      <input-t
+        label="POS-CONTROL.Stop Loss"
+        placeholder="POS-CONTROL.Price TON"
+        inputId="position-stop-loss"
+        [value]="newPosition.StopLoss"
+        [decimalPlaces]="4"
+        (valueChange)="calculateStopLossPrice($event)"
+        [isAdaptive]="true"
+      />
+    </div>
+    <div class="mb-5">
+      <error-message
+        *ngIf="positionErrorsState.stopLossMore"
+        messageContent="POS-CONTROL.StopLossGreaterErr"
+      ></error-message>
+    </div>
+    <div class="mb-5">
+      <error-message
+        *ngIf="positionErrorsState.stopLossLess"
+        messageContent="POS-CONTROL.StopLossLessErr"
+      ></error-message>
+    </div>
+    <div class="mb-5">
+      <error-message
+        *ngIf="positionErrorsState.minimalAvailableStopLoss"
+        messageContent="POS-CONTROL.StopLossMinErr"
+      ></error-message>
+    </div>
+    <div>
+      <custom-range
+        rangeType="sl"
+        [value]="this.newPosition.StopLossPercent || 0"
+        [max]="100"
+        (valueChange)="onStopLossPercentChange($event)"
+      />
+    </div>
+  </div>
+
+  <position-metrics
+    [positionSize]="this.newPosition.Margin * this.newPosition.Leverage"
+    [entryPrice]="this.newPosition.EntryPrice"
+    [liquidationPrice]="this.newPosition.Liquidation"
+    [priceImpact]="0.0"
+    [approximatePriceTP]="this.newPosition.TakeProfit || 0"
+    [approximatePriceSL]="this.newPosition.StopLoss || 0"
+  />
+
+  <div class="edit-pos-modal__buttons">
+    <button-custom
+      [dissabled]="
+        positionErrorsState.minimalAvailableBalance ||
+        positionErrorsState.minimalAvailableLeverage ||
+        positionErrorsState.minimalAvailablePrice ||
+        positionErrorsState.minimalAvailableStopLoss ||
+        positionErrorsState.minimalAvailableTakeProfit ||
+        positionErrorsState.stopLossLess ||
+        positionErrorsState.stopLossMore ||
+        positionErrorsState.takeProfitLess ||
+        positionErrorsState.takeProfitMore
+      "
+      (click)="saveOrder()"
+      text="BUTTONS.Save"
+      colorClass="main-b"
+    />
+    <button-custom
+      (click)="closeModal()"
+      text="BUTTONS.Close"
+      colorClass="wrong-b"
+    />
+  </div>
+</dialog>

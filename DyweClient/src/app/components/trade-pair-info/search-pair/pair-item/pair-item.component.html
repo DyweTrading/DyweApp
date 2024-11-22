@@ -1,0 +1,41 @@
+<div
+  class="search-pair-item"
+  (click)="navigateToTradePair(tradePairData.tradePairRoute)"
+>
+  <div class="search-pair-item-icon-info">
+    <div class="search-pair-item-icon-info-img">
+      <img [src]="tradePairData.tradePairIcon" alt="NFT Icon" />
+    </div>
+    <div class="search-pair-item-icon-info-content">
+      <div class="search-pair-item-icon-info-content-first">
+        <p class="M-14 text-color">{{ tradePairData.tradePairName }}</p>
+        <div
+          class="search-pair-item-icon-info-content-first-star"
+          (click)="addToFavorite($event)"
+        >
+          <img
+            *ngIf="isFavorite(); else notFavoriteIcon"
+            src="./assets/svg/star-filled.svg"
+            alt="Star Favorite"
+          />
+          <ng-template #notFavoriteIcon>
+            <img src="./assets/svg/star.svg" alt="Star Not Favorite" />
+          </ng-template>
+        </div>
+      </div>
+      <div class="search-pair-item-icon-info-content-second">
+        {{ tradePairData.tradePairVolume }} {{ currencyType }}
+      </div>
+    </div>
+  </div>
+  <div class="search-pair-item-metrics">
+    <p class="search-pair-item-metric OS-12">
+      {{ tradePairData.tradePairMarketPrice }} {{ currencyType }}
+    </p>
+    <p
+      class="search-pair-item-metric search-pair-item-metric-percent OS-12 main-color"
+    >
+      {{ tradePairData.tradePairPriceChange }}
+    </p>
+  </div>
+</div>
