@@ -1,0 +1,48 @@
+DyweBackend/backend/venv/bin/flask
+DyweBackend/backend/venv/
+DyweBackend/backend/.vscode/
+DyweBackend/backend/__pycache__/
+DyweBackend/backend/.env
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+DyweFrontend/dist
+DyweFrontend/tmp
+DyweFrontend/out-tsc
+DyweFrontend/bazel-out
+
+# Node
+DyweFrontend/node_modules
+DyweFrontend/npm-debug.log
+DyweFrontend/yarn-error.log
+
+# IDEs and editors
+DyweFrontend/.idea/
+DyweFrontend/.project
+DyweFrontend/.classpath
+DyweFrontend/.c9/
+DyweFrontend/*.launch
+DyweFrontend/.settings/
+DyweFrontend/*.sublime-workspace
+
+# Visual Studio Code
+DyweFrontend/.vscode/*
+DyweFrontend/!.vscode/settings.json
+DyweFrontend/!.vscode/tasks.json
+DyweFrontend/!.vscode/launch.json
+DyweFrontend/!.vscode/extensions.json
+DyweFrontend/.history/*
+
+# Miscellaneous
+DyweFrontend/.angular/cache
+DyweFrontend/.sass-cache/
+DyweFrontend/connect.lock
+DyweFrontend/coverage
+DyweFrontend/libpeerconnection.log
+DyweFrontend/testem.log
+DyweFrontend/typings
+
+# System files
+DyweFrontend/.DS_Store
+DyweFrontend/Thumbs.db
